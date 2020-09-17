@@ -76,7 +76,7 @@ class WARRIOR
 		void	attackEnemy(ENEMY enemy);
 		void	defenseEnemy(void);
 		void	getItem(ITEM item);
-}
+};
 
 #endif
 ~~~
