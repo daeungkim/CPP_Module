@@ -5,31 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/17 15:52:35 by seunkim           #+#    #+#             */
-/*   Updated: 2020/09/18 01:42:58 by seunkim          ###   ########.fr       */
+/*   Created: 2020/09/22 16:12:52 by seunkim           #+#    #+#             */
+/*   Updated: 2020/09/23 11:00:23 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.hpp"
-
-// allocate to heap memory
-void ponyOnTheHeap(void)
-{
-    PONY *pony = new PONY("singsong");
-    std::cout << pony->getName() << std::endl;
-    delete(pony);
-}
-
-void ponyOnTheStack(void)
-{
-    PONY pony("steven");
-    std::cout << pony.getName() << std::endl; 
-}
+#include "FragTrap.hpp"
 
 int main(void)
 {
-    std::cout << "========== Heap ==========" << std::endl;
-    ponyOnTheHeap();
-    std::cout << "========== Stack ==========" << std::endl;
-    ponyOnTheStack();
+    Fragtrap fragtrap("steven");
+    
+    fragtrap.meleeAttack("song");
+    fragtrap.meleeAttack("sing");
+    fragtrap.rangedAttack("kim");
+    fragtrap.takeDamage(40);
+    fragtrap.takeDamage(40);
+    fragtrap.takeDamage(40);
+    fragtrap.beRepaired(60);
+    fragtrap.beRepaired(60);
+    fragtrap.vaulthunter_dot_exe("kong");
+    fragtrap.vaulthunter_dot_exe("lee");
+    fragtrap.vaulthunter_dot_exe("park");
 }

@@ -6,7 +6,7 @@
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/21 18:45:41 by seunkim           #+#    #+#             */
-/*   Updated: 2020/09/22 00:16:13 by seunkim          ###   ########.fr       */
+/*   Updated: 2020/09/22 01:46:21 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,17 @@ Fixed::Fixed()
 Fixed::Fixed(int const value)
 {
     std::cout << "Int constructor called" << std::endl;
-    //std::cout << "value = " << value << " bit = " << std::bitset<32>(value) << std::endl;
+    std::cout << "value = " << value << " bit = " << std::bitset<32>(value) << std::endl;
     this->value_ = (value << BITS);
-    //std::cout << "this->value_ = " << this->value_ << " bit = " << std::bitset<32>(this->value_) << std::endl;
+    std::cout << "this->value_ = " << this->value_ << " bit = " << std::bitset<32>(this->value_) << std::endl;
 }
 
 Fixed::Fixed(float const value)
 {
     std::cout << "Float constructor called" << std::endl;
-    // std::cout << "value = " << value << " bit = " << std::bitset<32>(value) << std::endl;
+    std::cout << "value = " << value << " bit = " << std::bitset<32>(value) << std::endl;
     this->value_ = roundf(value * (1 << this->BITS));
-    //std::cout << "this->value_ = " << this->value_ << " bit = " << std::bitset<32>(this->value_) << std::endl;}
+    std::cout << "this->value_ = " << this->value_ << " bit = " << std::bitset<32>(this->value_) << std::endl;
 }
 
 Fixed::~Fixed()
