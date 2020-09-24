@@ -6,17 +6,17 @@
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/23 11:33:43 by seunkim           #+#    #+#             */
-/*   Updated: 2020/09/23 13:38:58 by seunkim          ###   ########.fr       */
+/*   Updated: 2020/09/23 17:57:19 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string name)
-    : hit_points_(100), max_hit_points_(100), energy_points_(100), max_energy_points_(100),
-    level_(1), name_(name), melee_attack_damage_(0), ranged_attack_damage_(0), armor_damage_reduction_(0)
+    : hit_points_(100), max_hit_points_(100), max_energy_points_(100), level_(1),
+     energy_points_(100), name_(name), melee_attack_damage_(0), ranged_attack_damage_(0), armor_damage_reduction_(0)
 {
-    std::cout << "ClapTrap(" << name << ") created!" << std::endl;
+    std::cout << "ClapTrap(" << name << " Lv:" << this->level_ << ") created!" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& ref)
