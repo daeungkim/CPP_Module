@@ -6,7 +6,7 @@
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 18:38:00 by seunkim           #+#    #+#             */
-/*   Updated: 2020/09/24 20:49:12 by seunkim          ###   ########.fr       */
+/*   Updated: 2020/09/24 21:26:53 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,20 @@ int main(void)
 {
     Sorcerer robert("Robert", "the Magnificent");
 
-    Victim *jim = new Victim("Jimmy");
-    Victim *joe = new Peon("Joe");
+    //Victim *jim = new Victim("Jimmy");
+    //Victim *joe = new Peon("Joe");
 
-    std::cout << robert << *jim << *joe;
+    Victim jim("Jimmy");
+    Peon joe("Joe");    
+   
+    std::cout << robert << jim << joe; 
+    // std::cout << robert << *jim << *joe;
 
-    robert.polymorph(*jim);
-    robert.polymorph(*joe);
+    robert.polymorph(jim);
+    robert.polymorph(joe);
 
-    delete(joe);
-    delete(jim);
+    // delete(joe);
+    // delete(jim);
 
     return 0;
 }
