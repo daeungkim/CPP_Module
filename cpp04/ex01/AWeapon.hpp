@@ -6,7 +6,7 @@
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/24 21:38:03 by seunkim           #+#    #+#             */
-/*   Updated: 2020/09/24 21:52:07 by seunkim          ###   ########.fr       */
+/*   Updated: 2020/09/27 03:08:57 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class AWeapon
         AWeapon(std::string const& name, int ap_cost, int damage);
         AWeapon(const AWeapon& ref);
         AWeapon& operator=(const AWeapon& ref);
-        ~AWeapon();
+        virtual ~AWeapon();
 
         std::string getName() const;
         int getApCost() const;
