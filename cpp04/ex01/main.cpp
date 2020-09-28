@@ -6,7 +6,7 @@
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/25 16:30:17 by seunkim           #+#    #+#             */
-/*   Updated: 2020/09/27 03:15:17 by seunkim          ###   ########.fr       */
+/*   Updated: 2020/09/27 05:35:00 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,9 @@ int main()
     delete pr;
     delete pf;
 
-    // 이미 죽음
-    //delete rs;
-    //delete sm;    
+    // //  이미 죽음
+    // delete rs;
+    // delete sm;   
     
     return 0;
 }
