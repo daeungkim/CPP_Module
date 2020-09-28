@@ -1,40 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/28 22:42:23 by seunkim           #+#    #+#             */
-/*   Updated: 2020/09/29 03:24:12 by seunkim          ###   ########.fr       */
+/*   Created: 2020/09/29 03:12:47 by seunkim           #+#    #+#             */
+/*   Updated: 2020/09/29 04:22:13 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
+#ifndef FORM_HPP
+# define FORM_HPP
 
 # include <iostream>
+# include "Bureaucrat.hpp"
 
-class Bureaucrat
+class Bureaucrat;
+
+class Form
 {
     private:
         const std::string   name_;
-        int                 grade_;
-        Bureaucrat();       // 코펠린 폼에서 기본 생성자는 외부에서 호출 할 수 없게 private에 선언
+        bool                is_sign_;
+        const int           sign_grade_;
+        const int           execute_grade_;
 
+        Form();
+    
     public:
-        Bureaucrat(std::string name, int grade);
-        Bureaucrat(const Bureaucrat& ref);
-        Bureaucrat& operator= (const Bureaucrat& ref);
-        ~Bureaucrat();
+        Form(std::string name, int sign_grade, int execute_grade);
+        Form(const Form &ref);
+        Form& operator=(const Form &ref);
+        ~Form();
+
+        std::string         getName() const;
+        bool                getIsSign() const;
+        int                 getSignGrade() const;
+        int                 getExecuteGrade() const;
         
-        std::string const&  getName() const;
-        int                 getGrade() const;
+        void beSigned(Bureaucrat &bur);
 
-        void                increaseGrade();
-        void                decreaseGrade();
-
-        // 예외 중첩 클래스 만들기
         class GradeTooHighException : public std::exception
         {
             public:
@@ -43,10 +49,10 @@ class Bureaucrat
         class GradeTooLowException : public std::exception
         {
             public:
-                virtual const char *what() const throw();
+               virtual const char *what() const throw(); 
         };
 };
 
-std::ostream& operator<<(std::ostream &out, Bureaucrat &bur);
+std::ostream &operator<<(std::ostream &out, Form &form);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 22:42:21 by seunkim           #+#    #+#             */
-/*   Updated: 2020/09/29 03:53:29 by seunkim          ###   ########.fr       */
+/*   Updated: 2020/09/29 04:21:23 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,22 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
     return "\033[0;31mBureaucratException: Grade too low\033[0m";
 }
+
+void Bureaucrat::signForm(Form &form)
+{
+    try
+    {
+        form.beSigned(*this);
+        std::cout << this->name_ << " signs " << form.getName() << "." << std::endl;
+        
+    }
+    catch(const std::exception& e)
+    {
+        std::cout << this->name_ << " cannot sign " << form.getName() << " because "; 
+        std::cerr << e.what() << '\n';
+    }
+    
+} 
 
 std::ostream& operator<<(std::ostream &out, Bureaucrat &bur)
 {
