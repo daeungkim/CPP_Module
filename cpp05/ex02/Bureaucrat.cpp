@@ -6,7 +6,7 @@
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 22:42:21 by seunkim           #+#    #+#             */
-/*   Updated: 2020/09/30 01:13:21 by seunkim          ###   ########.fr       */
+/*   Updated: 2020/09/30 03:12:11 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,19 @@ void Bureaucrat::signForm(Form &form)
     }
     
 } 
+
+void Bureaucrat::executeForm(Form const &form)
+{
+    try
+    {
+        form.execute(*this);
+        std::cout << this->getName() << " executes " << form.getName();
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+}
 
 std::ostream& operator<<(std::ostream &out, Bureaucrat &bur)
 {
