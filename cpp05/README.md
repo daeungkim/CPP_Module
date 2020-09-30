@@ -1,3 +1,22 @@
+## 문제 설명
+### 클래스 구조
+~~~
+Bureaucrat(관료)
+
+Form(양식)
+    - ShrubberyCreationForm
+    - RobotomyRequestForm
+    - PresidentialPardonForm
+
+Intern(인턴)
+~~~
+
+### 클래스 간의 관계
+- 관료의 등급에 따라 양식을 싸인하고 실행 할 수 있는 권한을 가지게 된다. 
+- 양식 등급 보다 관료의 등급이 높으면 서류에 싸인을 하고 실행할 수 있고 그러지 않으면 예외가 발생한다.
+- 인턴은 양식을 만들어서 리턴한다.
+
+
 ## ex00
 ### 예외처리
 #### exception 레퍼런스
