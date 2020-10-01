@@ -6,7 +6,7 @@
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 22:42:26 by seunkim           #+#    #+#             */
-/*   Updated: 2020/09/29 02:55:42 by seunkim          ###   ########.fr       */
+/*   Updated: 2020/09/30 16:09:44 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int main(void)
     {
         std::cerr << e.what() << '\n';
     }
+
+    std::cout << bur;
 
     std::cout << "==========inc, dec test==========" << std::endl; 
     
