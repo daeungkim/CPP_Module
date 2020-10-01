@@ -18,4 +18,4 @@ https://blockdmask.tistory.com/242
 - 43e-3000등등..
 
 ## c++11 함수는 어디까지?
-- 
+- mt19937 ??
