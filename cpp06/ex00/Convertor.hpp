@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Convertor.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: seunkim <seunkim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 23:33:35 by seunkim           #+#    #+#             */
-/*   Updated: 2020/10/01 00:52:11 by seunkim          ###   ########.fr       */
+/*   Updated: 2020/10/01 16:35:34 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Convertor
         Convertor(const Convertor& ref);
         Convertor& operator=(const Convertor& ref);
         ~Convertor();
-        
+
         void    printToChar();
         void    printToInt();
         void    printToFloat();
