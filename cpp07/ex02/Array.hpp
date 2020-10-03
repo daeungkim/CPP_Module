@@ -6,7 +6,7 @@
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 11:51:53 by seunkim           #+#    #+#             */
-/*   Updated: 2020/10/02 15:27:36 by seunkim          ###   ########.fr       */
+/*   Updated: 2020/10/02 16:15:41 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,6 @@ Array<T>& Array<T>::operator=(const Array &ref)
 template <typename T>
 T& Array<T>::operator[](unsigned int idx) const
 {   
-    
     if (idx >= this->n_)
         throw Array<T>::IndexOutOfRange();
     
