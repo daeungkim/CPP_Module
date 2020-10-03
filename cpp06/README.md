@@ -19,3 +19,4 @@ https://blockdmask.tistory.com/242
 
 ## c++11 함수는 어디까지?
 - mt19937 ??
+- https://boycoding.tistory.com/192
