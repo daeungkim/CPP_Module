@@ -6,7 +6,7 @@
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/03 19:03:43 by seunkim           #+#    #+#             */
-/*   Updated: 2020/10/03 20:07:35 by seunkim          ###   ########.fr       */
+/*   Updated: 2020/10/07 00:52:55 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class Span
         ~Span();
 
         void    addNumber(int num);
+        void    addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
         int     shortestSpan();
         int     longestSpan();     
 

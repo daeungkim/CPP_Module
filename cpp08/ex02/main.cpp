@@ -6,7 +6,7 @@
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/03 20:58:49 by seunkim           #+#    #+#             */
-/*   Updated: 2020/10/04 03:19:14 by seunkim          ###   ########.fr       */
+/*   Updated: 2020/10/04 05:05:31 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ int main(void)
     } 
     
     std::cout << std::endl;
+
+    int a(1);
 
     std::stack<int> s(mstack);
 

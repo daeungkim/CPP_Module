@@ -6,7 +6,7 @@
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/03 19:03:41 by seunkim           #+#    #+#             */
-/*   Updated: 2020/10/03 20:11:57 by seunkim          ###   ########.fr       */
+/*   Updated: 2020/10/07 00:59:15 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ Span::Span(const Span &ref)
 
 Span& Span::operator=(const Span &ref)
 {
-    *this = ref;
+    this->size_ = ref.size_;
+    this->vec_ = ref.vec_;
     return (*this);
 }
 
@@ -37,6 +38,18 @@ void Span::addNumber(int num)
     if (this->vec_.size() >= this->size_)
         throw std::out_of_range("\033[0;31mSpanException : vector is full\033[0m");
     this->vec_.push_back(num);
+}
+
+void Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+{
+    if (this->vec_.size() >= this->size_)
+        throw std::out_of_range("\033[0;31mSpanException : vector is full\033[0m");
+    while (begin != end)
+    {
+        this->vec_.push_back(*begin);
+        begin++;
+    }
+    
 }
 
 void Span::showElements()

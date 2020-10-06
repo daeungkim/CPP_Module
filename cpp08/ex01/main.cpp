@@ -6,7 +6,7 @@
 /*   By: seunkim <seunkim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/03 19:03:39 by seunkim           #+#    #+#             */
-/*   Updated: 2020/10/03 20:23:37 by seunkim          ###   ########.fr       */
+/*   Updated: 2020/10/07 01:01:39 by seunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,12 @@ int main(void)
     std::cout << "=======================================" << std::endl;
 
     Span test(10000);
-
+    std::vector<int> vec;
+    
     for (int i = 0; i < 10000; i++)
-        test.addNumber(std::rand() % 100000);
+        vec.push_back(rand() % 100000);
+    
+    test.addNumber(vec.begin(), vec.end());
 
     test.showElements();
 
